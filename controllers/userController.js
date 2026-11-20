@@ -194,6 +194,7 @@ async function getDashboard(req,res){
               name:loggedinUser.name,
               email:loggedinUser.email
         } 
+        
     });
 }catch(error){
     console.log("error");
