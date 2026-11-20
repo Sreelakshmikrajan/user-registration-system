@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container dashboard">
+
+        <h2>Dashboard</h2>
+        <p class="subtitle">Your account details</p>
+
+        <div class="profile">
+            <h3 id="welcome">Loading...</h3>
+            <p id="email"></p>
+        </div>
+
+        <button id="logoutBtn">Logout</button>
+
+        <p id="message"></p>
+
+    </div>
+
+    <script>
+        async function loadDashboard() {
+
+            try {
+
+                const response = await fetch("/api/dashboard",{
+                    method: "GET",
+                   credentials: "include"
+                })
+
+
+                const data = await response.json();
+
+                if (!response.ok) {
+                    window.location.href = "login.html";
+                    return;
+                }
+
+                document.getElementById("welcome").textContent =
+                    "Welcome, " + data.user.name;
+
+                document.getElementById("email").textContent =
+                    data.user.email;
+
+            } catch (error) {
+
+                document.getElementById("message").textContent =
+                    "Unable to load dashboard";
+
+            }
+
+        }
+
+        const logoutBtn = document.getElementById("logoutBtn");
+
+        logoutBtn.addEventListener("click", async function() {
+
+            try {
+
+                const response = await fetch("/api/logout", {
+                    method: "POST",
+                    credentials: "include"
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    window.location.href = "login.html";
+                } else {
+                    document.getElementById("message").textContent =
+                        data.message;
+                        
+                }
+
+            } catch (error) {
+
+                document.getElementById("message").textContent =
+                    "Logout failed";
+
+            }
+
+        });
+
+        loadDashboard();
+    </script>
+
+</body>
+</html>

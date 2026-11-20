@@ -1,0 +1,32 @@
+[
+  {
+    "id": "d1ae7689-9fed-4884-935e-c9b67543cd44",
+    "name": "Sreelakshmi",
+    "email": "sree@gmail.com",
+    "password": "$2b$10$caXrg52xB8wczV2NF07.aOINjxTlt6DISZ9f7Avfl3byqC5Vh8uLK"
+  },
+  {
+    "id": "6bac46e5-4ddd-4077-95ef-a02f21c4ad62",
+    "name": "Sree",
+    "email": "sree1@gmail.com",
+    "password": "$2b$10$NEmI2HuiQqhOXhrMNYXOxulej2liIUr8ciWP.DNyY/xZVUcDwlNE2"
+  },
+  {
+    "id": "856e7761-83f0-4563-baa6-1f33a90a6fa4",
+    "name": "Afeef",
+    "email": "afeef@gmail.com",
+    "password": "$2b$10$eYLRXvddq2a8AbXOQcejreVBS3MEXj0eL4w.NskTiXMf2S20UUvcy"
+  },
+  {
+    "id": "72c914c1-4084-4216-a035-ec044037976c",
+    "name": "Anu",
+    "email": "anu11@gmail.com",
+    "password": "$2b$10$qF2hr2poMvLQeI5rffg3qu3oBPzKEHEZJUddpkdvGRCepj6LWNMlq"
+  },
+  {
+    "id": "4ede98f8-8782-475d-8232-8e019cfb7f6f",
+    "name": "Arshi",
+    "email": "arshi1@gmail.com",
+    "password": "$2b$10$Ah2rZE10o/KoXSoG3d6V4O34kGKRsBvdoVcmjsBV.rkrRvErL./xu"
+  }
+]
